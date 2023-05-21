@@ -4,6 +4,5 @@ import com.bmc.LoginAuthenticationBackend.Dto.EmployeeDTO;
 
 public interface EmployeeService {
 
-
     String addEmployee(EmployeeDTO employeeDTO);
 }
