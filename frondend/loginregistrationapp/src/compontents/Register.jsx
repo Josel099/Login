@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-
+import React from 'react';
 function Register() {
   
     const [employeename, setEmployeename] = useState("");
@@ -12,7 +12,7 @@ function Register() {
         event.preventDefault();
         try {
           await axios.post("http://localhost:8089/employee/save", {
-          employeename: employeename,
+          employeeName: employeename,
           email: email,
           password: password,
           });
