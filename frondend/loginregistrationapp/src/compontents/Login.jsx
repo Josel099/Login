@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
- // const navigate = useNavigate();
+ //const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   
@@ -20,12 +20,13 @@ function Login() {
           (res) => {
             console.log(res.data);
 
-            if (res.data.message === "Email not exits") {
-              alert("Email not exits");
-            } else if (res.data.message === "Login Success") {
+            if (res.data.message == "Email not exists") {
+              alert("Email not exists");
+            } else if (res.data.message == "Login Success") {
+              alert("login sucess")
               useNavigate("/home");
             } else {
-              alert("Incorrect Email and Password not match");
+              alert(" Email and Password not match");
             }
           },
           (fail) => {
