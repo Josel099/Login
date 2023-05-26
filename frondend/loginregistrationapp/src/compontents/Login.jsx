@@ -24,7 +24,7 @@ function Login() {
               alert("Email not exists");
             } else if (res.data.message == "Login Success") {
               alert("login sucess")
-              useNavigate("/home");
+              useNavigate('/home');
             } else {
               alert(" Email and Password not match");
             }
