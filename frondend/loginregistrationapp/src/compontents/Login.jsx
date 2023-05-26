@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
- //const navigate = useNavigate();
+ const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   
@@ -23,8 +23,7 @@ function Login() {
             if (res.data.message == "Email not exists") {
               alert("Email not exists");
             } else if (res.data.message == "Login Success") {
-              alert("login sucess")
-              useNavigate('/home');
+              navigate('/home');
             } else {
               alert(" Email and Password not match");
             }
@@ -79,6 +78,8 @@ function Login() {
               <button type="submit" class="btn btn-primary" onClick={login}>
                 Login
               </button>
+              <button style={{ margin: '10px' }} type="button" className="btn btn-primary" onClick={() => navigate("/register")}>Registration</button>
+
             </form>
           </div>
         </div>
